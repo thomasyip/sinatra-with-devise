@@ -24,7 +24,6 @@ MyApp::Application.configure do
   config.action_dispatch.best_standards_support = :builtin
   
   # For Devise
-  config.action_mailer.default_url_options = { :host => 'myapp.heroku.com' }
   ActionMailer::Base.smtp_settings = {
     :address        => "smtp.sendgrid.net",
     :port           => "587",
