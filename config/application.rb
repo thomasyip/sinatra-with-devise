@@ -38,5 +38,8 @@ module MyApp
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
+    
+    # Map devise folder
+    config.paths['app/views'] << "app/views/devise"
   end
 end
