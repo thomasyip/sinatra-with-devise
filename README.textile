@@ -42,6 +42,3 @@ heroku addons:add sendgrid:starter --app ${new_project_name}
 heroku rake db:migrate --app ${new_project_name}
 </pre>
 
-h2. License
-
-See LICENSE.txt for license.
