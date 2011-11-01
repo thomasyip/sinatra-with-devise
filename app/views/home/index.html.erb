@@ -1,6 +1,11 @@
 <h1>Home#index</h1>
 <p>Find me in app/views/home/index.html.erb</p>
 
+<h3>Devise Links</h3>
 <p><%= link_to "Sign In", "users/sign_in" %></p>
 <p><%= link_to "Sign Up", "users/sign_up" %></p>
 <p><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></p>
+
+<h3>Sinatra Links</h3>
+<a href="/slim">A simple route that redirect you to a static file</a>
+<a href="/slim/protected">A protected resource. You receive '401' if you are unauthenticated.</a>
