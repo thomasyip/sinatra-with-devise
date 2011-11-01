@@ -1,0 +1,47 @@
+h1. Using Sinatra with Devise
+
+We need authentication in pretty much every project. If Sinatra Devise (with Rails), Heroku are your weapons of choice, then this project might save you some time.
+
+The commit histories were carefully crafted such that it is easy for people to follow the steps and regenerate this project with new versions of gems.
+
+
+h2. Usage
+
+1) First, create a new directory
+
+<pre>
+mkdir MyApp
+cd MyApp
+</pre>
+
+
+2a) Pick a new unique heroku name for your project:
+
+<pre>
+export new_project_name=---a-new-name---
+heroku create ${new_project_name}
+</pre>
+
+2b) Or, let heroku pick one for you and export the name:
+
+<pre>
+heroku create
+export new_project_name=---a-new-name---
+</pre>
+
+
+3) Run these commands:
+
+<pre>
+git init
+git remote add origin git@heroku.com:${new_project_name}.git
+git remote add baseline git@github.com:beedesk/sinatra-with-devise.git
+git pull baseline master
+git push -u origin master
+heroku addons:add sendgrid:starter --app ${new_project_name}
+heroku rake db:migrate --app ${new_project_name}
+</pre>
+
+h2. License
+
+See LICENSE.txt for license.
