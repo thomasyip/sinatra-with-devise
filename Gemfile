@@ -1,17 +1,19 @@
 source 'http://rubygems.org'
 
-gem 'rack', '1.2.4'
+gem 'rack'
 
 gem 'devise'
 
-gem 'rails', '3.0.10'
+gem 'rails'
 
 gem 'sinatra'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+# gem 'sqlite3'
+
+gem 'pg'
 
 # Use unicorn as the web server
 # gem 'unicorn'
